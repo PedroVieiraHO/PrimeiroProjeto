@@ -1,33 +1,42 @@
-// import { View, Text} from "react-native";
+import { ImageBackground } from "react-native";
+import styled from "styled-components/native";
 
-// export default function App() {
-//   return (
-//   <View> 
-//     <Text>Hello World</Text>
-//     <Text>IDMO</Text>
-//   </View>
-//   );
-// }
+const PageContainer = styled.View`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+` 
 
-// const styles = StyleSheet.create ({
-//   container: {
-//     flex: 1,
-//     display: "flex",
-//     flexDirection: "column",
-//     justifyContent: "center",
-//     alignItems: "center",
-//     backgroundColor: "blue",
-//   };
+const Title = styled.Text`
+    padding-bottom: 40px;
+    font-size: 50px;
+    font-weight: 300;
+    color: red;`
 
-//   title: {
-//     fontSize: 50,
-//     fontWeight: "bold",
-//     color: "white"
-//   };
-//   paragraph: {
-//     paddingTop: 20,
-//     fontSize: 30,
-//     color: "yellow",
-//   }
+const Subtitle = styled.Text`
+    padding-top: 40px;
+    font-size: 30px;
+    color: green;
+`
 
-// });
+const BackgroundImage = styled(ImageBackground)`
+     flex: 1;
+     justify-content: center;
+     align-items: center;
+`
+
+
+
+export default function App() {
+            return ( 
+        <BackgroundImage source={require("./assets/image.jpg")}>
+
+        <PageContainer>
+        <Title>Hello</Title>
+        <Subtitle>World</Subtitle>
+        </PageContainer>
+        </BackgroundImage>
+    );
+}
+
+
